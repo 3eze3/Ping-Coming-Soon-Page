@@ -1,0 +1,33 @@
+@font-face {
+  font-family: frank-light;
+  src: url("../assets/fonts/LibreFranklin-Light.ttf");
+}
+
+@font-face {
+  font-family: frank-semibold;
+  src: url("../assets/fonts/LibreFranklin-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: frank-bold;
+  src: url("../assets/fonts/LibreFranklin-Bold.ttf");
+}
+
+body {
+  min-height: 100vh;
+  font-size: 20px;
+  font-family: frank-light;
+  hyphens: manual;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1 {
+  font-size: 1.5em;
+  font-family: frank-bold;
+  // color: ;
+}
+span {
+  font-size: 1.1em;
+  // color: ;
+}
