@@ -1,3 +1,4 @@
+@use "../abtract/variables" as colors_bg;
 @font-face {
   font-family: frank-light;
   src: url("../assets/fonts/LibreFranklin-Light.ttf");
@@ -23,11 +24,24 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 h1 {
-  font-size: 1.5em;
-  font-family: frank-bold;
-  // color: ;
+  font-size: colors_bg.$lg;
+  font-family: frank-light;
+  font-weight: 300;
+  color: colors_bg.$gray;
+  &::after {
+    content: " soon!";
+    display: inline;
+    font-family: frank-bold;
+    color: colors_bg.$very-dark-blue;
+  }
 }
 span {
-  font-size: 1.1em;
-  // color: ;
+  font-size: colors_bg.$md;
+  color: colors_bg.$very-dark-blue;
+}
+
+button {
+  background-color: colors_bg.$blue;
+  color: colors_bg.$white;
+  font-size: colors_bg.$sm;
 }
