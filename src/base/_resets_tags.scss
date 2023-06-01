@@ -52,3 +52,9 @@ svg {
   display: block;
   fill: currentColor;
 }
+header,
+main,
+footer {
+  max-width: 92rem;
+  margin-inline: auto;
+}
