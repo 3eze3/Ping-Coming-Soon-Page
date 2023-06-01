@@ -1,0 +1,12 @@
+.header {
+  padding-top: 3.5rem;
+  text-align: center;
+  &__logo {
+    width: 6.5rem;
+    margin-inline: auto;
+    margin-bottom: 3.5rem;
+  }
+  &__title {
+    margin-bottom: 1.5rem;
+  }
+}
