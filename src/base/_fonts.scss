@@ -1,4 +1,5 @@
 @use "../abtract/variables" as colors_bg;
+@use "../abtract/mixin" as layout;
 @font-face {
   font-family: frank-light;
   src: url("../assets/fonts/LibreFranklin-Light.ttf");
@@ -34,10 +35,17 @@ h1 {
     font-family: frank-bold;
     color: colors_bg.$very-dark-blue;
   }
+  @include layout.media-break() {
+    font-size: 1.35em;
+  }
 }
 span {
   font-size: colors_bg.$md;
   color: colors_bg.$very-dark-blue;
+  font-weight: 700;
+  @include layout.media-break() {
+    font-size: 1em;
+  }
 }
 
 button {
