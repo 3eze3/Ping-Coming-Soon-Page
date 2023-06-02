@@ -1,7 +1,47 @@
+@use "../abtract/mixin" as layout;
+@use "../abtract/variables" as colors_bg;
 .register {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  outline: solid red 1px;
+  width: fit-content;
+  @include layout.flex($direction: row, $gap: 8.5rem);
+  @include layout.media-break() {
+    @include layout.flex($gap: 1.25rem);
+  }
+  &__email {
+    width: 140%;
+    padding-block: 0.6rem;
+    border-radius: 2rem;
+    outline: solid 1px #0004;
+    padding-left: 1.5rem;
+    &:focus {
+      outline: solid 1px colors_bg.$very-dark-blue;
+    }
+
+    &::placeholder {
+      font-size: 0.8em;
+      color: #0004;
+    }
+
+    @include layout.media-break() {
+      width: 100%;
+      padding-inline: 1.35rem;
+      padding-block: 0.45rem;
+      &::placeholder {
+        font-size: 0.7em;
+      }
+    }
+  }
+  &__send {
+    padding: 0.9rem 3.5rem;
+    border-radius: 2rem;
+    box-shadow: 0.1rem 0.23rem 0.5rem #0004;
+    transition: opacity 0.15s ease-in;
+    &:hover {
+      opacity: 0.8;
+      transition: 0.15s ease-in;
+    }
+    @include layout.media-break() {
+      width: 100%;
+      padding: 0.8rem 3.5rem;
+    }
+  }
 }
