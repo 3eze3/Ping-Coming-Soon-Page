@@ -6,7 +6,7 @@
   margin-bottom: 2.5rem;
   position: relative;
   @include layout.media-break() {
-    @include layout.flex($gap: 1.25rem);
+    @include layout.flex($gap: 1.9rem);
   }
   &__email {
     width: 140%;
@@ -55,5 +55,8 @@
     bottom: -1.5rem;
     left: 1.5rem;
     opacity: 0;
+    @include layout.media-break() {
+      bottom: 3.35rem;
+    }
   }
 }
