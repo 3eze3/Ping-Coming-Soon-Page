@@ -55,6 +55,11 @@
     bottom: -1.5rem;
     left: 1.5rem;
     opacity: 0;
+    transition: opacity 0.15s ease;
+    &--active {
+      opacity: 1;
+      transition: opacity 0.15s ease;
+    }
     @include layout.media-break() {
       bottom: 3.35rem;
     }
