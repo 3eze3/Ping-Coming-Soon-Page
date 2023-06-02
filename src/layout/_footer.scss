@@ -1,0 +1,43 @@
+@use "../abtract/mixin" as layout;
+@use "../abtract/variables" as colors_bg;
+.footer {
+  margin-top: 6rem;
+  padding-bottom: 2rem;
+  @include layout.flex($gap: 1.5rem);
+  &__social {
+    width: 30%;
+    @include layout.media-break {
+      width: 100%;
+    }
+    @include layout.flex($direction: row, $gap: 2.5rem);
+  }
+
+  &__link {
+    width: 2.5rem;
+    height: 2.5rem;
+    @include layout.flex($direction: row, $gap: 0);
+    border-radius: 50%;
+    box-shadow: 0.08rem 0.08rem 0.2rem rgba(251, 235, 235, 0.693) inset,
+      -0.08rem -0.08rem 0.2rem rgba(0, 0, 0, 0.281) inset;
+    transition: transform 0.2s ease-in, backgroun-color 0.2s ease;
+
+    &:hover {
+      transform: translateY(-0.75rem);
+      background-color: colors_bg.$blue;
+      transition: transform 0.2s ease-in, backgroun-color 0.2s ease;
+    }
+
+    &:hover .footer__icon {
+      color: colors_bg.$white;
+    }
+  }
+
+  &__icon {
+    color: colors_bg.$blue;
+    font-size: 0.85em;
+  }
+
+  &__copyright {
+    font-size: 0.7em;
+  }
+}
