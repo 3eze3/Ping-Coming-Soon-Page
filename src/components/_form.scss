@@ -3,15 +3,17 @@
 .register {
   width: fit-content;
   @include layout.flex($direction: row, $gap: 8.5rem);
+  margin-bottom: 2.5rem;
+  position: relative;
   @include layout.media-break() {
     @include layout.flex($gap: 1.25rem);
   }
   &__email {
     width: 140%;
     padding-block: 0.6rem;
+    padding-left: 1.5rem;
     border-radius: 2rem;
     outline: solid 1px #0004;
-    padding-left: 1.5rem;
     &:focus {
       outline: solid 1px colors_bg.$very-dark-blue;
     }
@@ -43,5 +45,15 @@
       width: 100%;
       padding: 0.8rem 3.5rem;
     }
+  }
+  &__error {
+    font-size: 0.6em;
+    font-style: oblique;
+    color: colors_bg.$light-red;
+    letter-spacing: 0.02em;
+    position: absolute;
+    bottom: -1.5rem;
+    left: 1.5rem;
+    opacity: 0;
   }
 }
