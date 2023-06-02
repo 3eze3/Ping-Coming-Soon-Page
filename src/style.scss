@@ -3,4 +3,6 @@
 @use "base/fonts";
 // layout
 @use "layout/header";
+@use "layout/main";
 // Components
+@use "components/form";
