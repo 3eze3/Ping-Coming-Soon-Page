@@ -36,7 +36,7 @@ h1 {
     color: colors_bg.$very-dark-blue;
   }
   @include layout.media-break() {
-    font-size: 1.35em;
+    font-size: 1.2em;
   }
 }
 span {
@@ -44,7 +44,7 @@ span {
   color: colors_bg.$very-dark-blue;
   font-weight: 700;
   @include layout.media-break() {
-    font-size: 1em;
+    font-size: 0.75em;
   }
 }
 
@@ -52,4 +52,5 @@ button {
   background-color: colors_bg.$blue;
   color: colors_bg.$white;
   font-size: colors_bg.$sm;
+  cursor: pointer;
 }
