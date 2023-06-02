@@ -53,6 +53,13 @@ svg {
   fill: currentColor;
 }
 
+header,
+main,
+footer {
+  max-width: 92rem;
+  margin-inline: auto;
+}
+
 @font-face {
   font-family: frank-light;
   src: url("../assets/fonts/LibreFranklin-Light.ttf");
@@ -76,7 +83,7 @@ body {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 2.25em;
   font-family: frank-light;
   font-weight: 300;
   color: hsl(0deg, 0%, 59%);
@@ -87,16 +94,198 @@ h1::after {
   font-family: frank-bold;
   color: hsl(209deg, 33%, 12%);
 }
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.2em;
+  }
+}
 
 span {
-  font-size: 1.1em;
+  font-size: 1.05em;
   color: hsl(209deg, 33%, 12%);
+  font-weight: 700;
+}
+@media screen and (max-width: 480px) {
+  span {
+    font-size: 0.75em;
+  }
 }
 
 button {
   background-color: hsl(223deg, 87%, 63%);
   color: hsl(0deg, 0%, 100%);
-  font-size: 0.9em;
+  font-size: 0.7em;
+  cursor: pointer;
+}
+
+.header {
+  padding-top: 3.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.header__logo {
+  width: 6rem;
+  margin-inline: auto;
+  margin-bottom: 3.15rem;
+}
+@media screen and (max-width: 480px) {
+  .header__logo {
+    width: 4rem;
+  }
+}
+.header__title {
+  margin-bottom: 1.5rem;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.5rem;
+}
+@media screen and (max-width: 480px) {
+  .information {
+    padding-inline: 1rem;
+  }
+}
+.information__diagram {
+  width: 45%;
+}
+@media screen and (max-width: 480px) {
+  .information__diagram {
+    width: 100%;
+  }
+}
+
+.footer {
+  margin-top: 6rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.footer__social {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+@media screen and (max-width: 480px) {
+  .footer__social {
+    width: 100%;
+  }
+}
+.footer__link {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  border-radius: 50%;
+  box-shadow: 0.08rem 0.08rem 0.2rem rgba(251, 235, 235, 0.693) inset, -0.08rem -0.08rem 0.2rem rgba(0, 0, 0, 0.281) inset;
+  transition: transform 0.2s ease-in, backgroun-color 0.2s ease;
+}
+.footer__link:hover {
+  transform: translateY(-0.75rem);
+  background-color: hsl(223deg, 87%, 63%);
+  transition: transform 0.2s ease-in, backgroun-color 0.2s ease;
+}
+.footer__link:hover .footer__icon {
+  color: hsl(0deg, 0%, 100%);
+}
+.footer__icon {
+  color: hsl(223deg, 87%, 63%);
+  font-size: 0.85em;
+}
+.footer__copyright {
+  font-size: 0.7em;
+}
+
+.register {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8.5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+@media screen and (max-width: 480px) {
+  .register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.9rem;
+  }
+}
+.register__email {
+  width: 140%;
+  padding-block: 0.6rem;
+  padding-left: 1.5rem;
+  border-radius: 2rem;
+  outline: solid 1px rgba(0, 0, 0, 0.2666666667);
+}
+.register__email:focus {
+  outline: solid 1px hsl(209deg, 33%, 12%);
+}
+.register__email::placeholder {
+  font-size: 0.8em;
+  color: rgba(0, 0, 0, 0.2666666667);
+}
+@media screen and (max-width: 480px) {
+  .register__email {
+    width: 100%;
+    padding-inline: 1.35rem;
+    padding-block: 0.45rem;
+  }
+  .register__email::placeholder {
+    font-size: 0.7em;
+  }
+}
+.register__send {
+  padding: 0.9rem 3.5rem;
+  border-radius: 2rem;
+  box-shadow: 0.1rem 0.23rem 0.5rem rgba(0, 0, 0, 0.2666666667);
+  transition: opacity 0.15s ease-in;
+}
+.register__send:hover {
+  opacity: 0.8;
+  transition: 0.15s ease-in;
+}
+@media screen and (max-width: 480px) {
+  .register__send {
+    width: 100%;
+    padding: 0.8rem 3.5rem;
+  }
+}
+.register__error {
+  font-size: 0.6em;
+  font-style: oblique;
+  color: hsl(354deg, 100%, 66%);
+  letter-spacing: 0.02em;
+  position: absolute;
+  bottom: -1.5rem;
+  left: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+.register__error--active {
+  opacity: 1;
+  transition: opacity 0.15s ease;
+}
+@media screen and (max-width: 480px) {
+  .register__error {
+    bottom: 3.35rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
